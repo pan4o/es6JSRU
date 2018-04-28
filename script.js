@@ -18,7 +18,7 @@ function getProfession() {
 
 let [visitorName, visitorProfession=getProfession()] = ['Jim'];
 
-console.log(visitorName, visitorProfession);
+console.log(visitorName, visitorProfession); // Jim doctor
 
 let options = {
   title: 'Menu',
