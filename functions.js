@@ -69,3 +69,15 @@ console.log(inc(1)); //2
 let getTime = () => new Date().getHours() + ' ' + new Date().getMinutes();
 
 console.log(getTime());
+
+let group = {
+  title: 'Our group',
+  students: ['Tim','Anny', 'Bill'],
+  getList: function() {
+    this.students.forEach(
+      student => console.log(this.title + ': ' + student)
+    );
+  }
+}
+
+group.getList();
