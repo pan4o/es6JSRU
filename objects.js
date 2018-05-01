@@ -119,3 +119,22 @@ karl.walk(); //I'm walking
 let walk = karl.walk;
 
 walk(); //I'm walking
+
+//setPrototypeOf(object, newProto);
+
+let foo = {
+  name: 'foo',
+  age: 34
+}
+
+let bar = {
+  name: 'bar',
+  getAge() {
+    return super.age
+  }
+}
+
+Object.setPrototypeOf(bar, foo);
+
+console.log(bar.__proto__); //{name: "foo", age: 34}
+console.log(bar.getAge()); //34
