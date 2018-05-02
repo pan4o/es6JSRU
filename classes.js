@@ -43,6 +43,10 @@ class Boy {
   ['test'.toUpperCase()]() {
     console.log('TEST');
   }
+
+  static createGuest() {
+    return new Boy('Default','User');
+  }
 }
 
 let hesp = new Boy('John', 'Hesp');
@@ -79,3 +83,38 @@ console.log(tim.info);
 tim.info = "Tom 44";
 
 console.log(tim.info);
+
+let guest = Boy.createGuest();
+
+console.log(guest.firstName, guest.lastName); //Default User
+
+class Sidebar {
+  static get elemClass() {
+    return 'sidebar';
+  }
+}
+
+console.log(Sidebar.elemClass);  //sidebar
+
+//extends
+
+class Man {
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayName() {
+    console.log('my name is ' + this.name);
+  }
+}
+
+let l = new Man('LeBron');
+
+class Player extends Man {
+  sayName() {
+    super.sayName();
+    console.log('Hello ' + this.name);
+  }
+}
+
+let p = new Player('Durant');
