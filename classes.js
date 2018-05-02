@@ -118,3 +118,12 @@ class Player extends Man {
 }
 
 let p = new Player('Durant');
+
+class Volodya extends Man {
+  constructor() {
+    //nasledovanie roditelskogo konstruktora s argumentom dlya imeni
+    super('Volodya');
+  }
+}
+
+let v = new Volodya(); //{name:'Volodya'}
