@@ -28,3 +28,32 @@ let testMap = new Map([
 
 console.log(testMap.get(1)); //test
 console.log(testMap.get('2')); //test2
+
+//objects can be keys
+
+let a = {
+  name: 'Tom'
+}
+
+testMap.set(a, 'user');
+
+console.log(testMap.get(a)); //user
+
+//map.delete(key), map.clear(key), map.has(key)
+
+let d = new Map([
+  [1,1],
+  [2,2],
+  [3,3],
+  [4,4]
+]);
+
+d.delete(2);
+
+console.log(d) //{1 => 1, 3 => 3, 4 => 4}
+
+console.log(d.has(3)); //true
+
+d.clear();
+
+console.log(d); // {} 
