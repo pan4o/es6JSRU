@@ -56,4 +56,70 @@ console.log(d.has(3)); //true
 
 d.clear();
 
-console.log(d); // {} 
+console.log(d); // {}
+
+//iteration methods for Maps
+
+let receipMap = new Map([
+  ['apples','2'],
+  ['oranges','3'],
+  ['milk','1 liter']
+]);
+
+//loop by keys
+
+for(let key of receipMap.keys()) {
+  console.log(key); //apples orage milk
+}
+
+//loop for values
+
+for(let value of receipMap.values()) {
+  console.log(value); // 2 3 1 liter
+}
+
+// loop for entries
+
+for(let entry of receipMap) { // same receipMap.entries()
+  console.log(entry); // apples 2 oranges 3 milk 1 liter
+}
+
+// map has default forEach methods
+
+receipMap.forEach((key, value) => {
+  console.log(`${key} ${value}`);
+});
+
+//2 apples
+//3 oranges
+//1 liter milk
+
+
+//SET
+//save value only once
+let set = new Set();
+
+let vasya = {name: 'Vasya'},
+    kolya = {name: 'Kolya'},
+    petya = {name: 'Petya'};
+
+set.add(vasya);
+set.add(vasya);
+set.add(vasya);
+set.add(vasya);
+set.add(kolya);
+set.add(petya);
+set.add(petya);
+set.add(petya);
+
+console.log(set.size); //3
+
+//iterator for set
+set.forEach((item) => {
+  console.log(item.name); //Vasya Kolya Petya
+});
+
+/*
+defalul methods of Set
+add() delete() has() clear()
+*/
