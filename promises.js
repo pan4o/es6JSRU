@@ -7,9 +7,9 @@ let promise = new Promise((resolve, reject) => {
 
     if (Math.random() > 0.5) {
       resolve('Hello User');
-    } else {
-      reject('Something Wrong:(');
     }
+
+    reject('Something Wrong:(');
 
   }, 1000);
 });
@@ -20,6 +20,6 @@ promise
 .then(() => {
   let result = 4;
   console.log(`2+2=${result}`) //2+2=4
-  return result;  
+  return result;
 })
 .then(result => console.log(`${result} > 3`)); // 4 > 3
