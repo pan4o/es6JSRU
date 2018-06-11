@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["env", {
+        "targets": {
+          "chrome": 54
+        },
+        "loose": true,
+        "modules": false,
+        "include": ["transform-es2015-classes"]
+    }],
+  ],
+  "plugins": [
+    "babel-plugin-transform-es2015-parameters",
+    "babel-plugin-transform-es2015-destructuring"
+  ]
+}
